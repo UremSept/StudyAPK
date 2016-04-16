@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+
+android:orientation="vertical"
+    tools:context="com.example.houjie.studyapk.studytocastdialogwindow.dialog.ActivityDialog">
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/DialogButton"
+    android:text="打开一个daloge"
+    />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/DialogButton1"
+    android:text="打开一个带单选框的daloge"
+    />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/DialogButton2"
+    android:text="打开一个带复选框的daloge"
+    />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/DialogButton3"
+    android:text="打开一个下载数据的daloge"
+    />
+
+</LinearLayout>

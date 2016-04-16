@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.houjie.studyapk.studyadapter.StudyAdapter">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnArrayAdapter"
+        android:textAllCaps="false"
+        android:text="ArrayAdapter"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SimpleAdapter"
+        android:textAllCaps="false"
+        android:id="@+id/btnSimpleAdapter"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SimpleCursorAdapter"
+        android:textAllCaps="false"
+        android:id="@+id/btnSimpleCursorAdapter"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ShowPeople"
+        android:textAllCaps="false"
+        android:id="@+id/btnShowPeople"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ChatAdapter"
+        android:textAllCaps="false"
+        android:id="@+id/btnChatAdapter"
+        />
+</LinearLayout>
+

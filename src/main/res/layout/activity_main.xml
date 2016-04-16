@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    tools:context="com.example.houjie.studyapk.MainActivity">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学习intent"
+        android:textAllCaps="false"
+        android:id="@+id/btnStudyIntent"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学习adapter"
+        android:textAllCaps="false"
+        android:id="@+id/btnStudyAdapter"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学习view"
+        android:textAllCaps="false"
+        android:id="@+id/btnStudyView"
+        />
+    <Button    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学习TocastDialogWindow"
+        android:textAllCaps="false"
+        android:id="@+id/btnStudyTDW"/>
+    <Button    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学习Notification"
+        android:textAllCaps="false"
+        android:id="@+id/btnStudyNotification"/>
+    <Button    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学习Menu"
+        android:textAllCaps="false"
+        android:id="@+id/btnStudyNotified"/>
+    <Button android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="学习fragment"
+        android:textAllCaps="false"
+        android:id="@+id/btnStudyFragment"
+        />
+    <Button android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="学习一些新的特性"
+        android:textAllCaps="false"
+        android:id="@+id/btnStudyNewKnowledge"
+        />
+    <Button android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="学习service"
+        android:textAllCaps="false"
+        android:id="@+id/btnStudyService"
+        />
+</GridLayout>

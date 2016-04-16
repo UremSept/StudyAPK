@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.houjie.studyapk">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".studyadapter.StudyAdapter" />
+        <activity android:name=".studyadapter.adapter.ActivityCustemAdapter" />
+        <activity android:name=".studyadapter.adapter.ActivityShowPeople" />
+        <activity android:name=".studyadapter.adapter.ActivitySimpleAdapter" />
+        <activity android:name=".studyadapter.adapter.ActivityArrayAdapter" />
+        <activity android:name=".studyadapter.adapter.ActivityChatAdapter" />
+        <activity android:name=".studyintent.StudyIntent" />
+        <activity android:name=".studyintent.intent.SecActivity" />
+        <activity android:name=".studyintent.intent.BackActivity" />
+        <activity android:name=".studyintent.intent.ThridActivity">
+            <intent-filter>
+                <action android:name="shofahfohfo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".studyview.StudyView" />
+        <activity android:name=".studyview.view.RichText" />
+        <activity android:name=".studyview.view.PickerSwitcher" />
+        <activity android:name=".studyview.view.Login" />
+        <activity android:name=".studyview.view.ForgetPassword" />
+        <activity android:name=".studyview.view.LoginFinsh" />
+        <activity android:name=".studyview.view.Register" />
+        <activity android:name=".studyview.view.ViewSeekBar" />
+        <activity android:name=".studytocastdialogwindow.StudyTDW" />
+        <activity android:name=".studytocastdialogwindow.window.ActivityWindow" />
+        <activity android:name=".studytocastdialogwindow.tocast.ActivityToast" />
+        <activity android:name=".studytocastdialogwindow.dialog.ActivityDialog" />
+        <activity android:name=".studynotification.ActivityNotification" />
+        <activity android:name=".studymenu.ActivityMenu" />
+        <activity android:name=".studyview.spinner.ViewSpinner" />
+        <activity android:name=".studyfragment.StudyFragment" />
+        <activity android:name=".studyfragment.fragment.LifecycleActivity" />
+        <activity android:name=".studyfragment.fragment.FragmentActivityTest" />
+        <activity android:name=".studyview.viewpager.ActivityViewPager" />
+        <activity android:name=".studyfragment.fragmentpager.ActivityFragmentPager" />
+        <activity android:name=".studytnewknowledge.tablayout.StudyTabLayout" />
+        <activity android:name=".studytnewknowledge.ActivityStudyNewKnowledge" />
+        <activity android:name=".studytnewknowledge.tablayout.ActivityTabFragment" />
+        <activity android:name=".studyview.viewscroll.ViewScroll" />
+        <activity android:name=".studytnewknowledge.viewcard.ActivityViewCard" />
+        <activity android:name=".studytnewknowledge.recycler.learnrecycler.HorizontalRecycler" />
+        <activity android:name=".studytnewknowledge.recycler.ActivityRecycler" />
+        <activity android:name=".studytnewknowledge.recycler.learnrecycler.StagRecycler" />
+        <activity android:name=".studytnewknowledge.recycler.testrecycler.TestRecycler" />
+        <activity android:name=".studyservice.ActivityService" />
+        <activity android:name=".studyservice.activity.TestServiceOne"></activity>
+        <activity android:name=".studyservice.activity.TestServiceTwo"></activity>
+
+
+        <service android:name=".studyservice.bean.FirstService"></service>
+        <service android:name=".studyservice.bean.TestBindService"></service>
+    </application>
+
+</manifest>

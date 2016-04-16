@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2"
+        >
+        <TableRow >
+            <TextView android:text="学号"/>
+            <TextView android:text="姓名"/>
+            <TextView android:text="班级"/>
+        </TableRow>
+        <TableRow >
+            <TextView android:text="201310531"/>
+            <TextView android:text="黄勇"/>
+            <TextView android:text="计算机1301"/>
+        </TableRow>
+        <TableRow >
+            <TextView android:text="201310532"/>
+            <TextView android:text="新站超"/>
+            <TextView android:text="计算机1301"/>
+        </TableRow>
+        <TableRow >
+            <TextView android:text="201310533"/>
+            <TextView android:text="杨先斌"/>
+            <TextView android:text="计算机1301"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

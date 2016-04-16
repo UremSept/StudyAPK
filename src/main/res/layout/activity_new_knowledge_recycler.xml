@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:orientation="vertical"
+    tools:context=".studytnewknowledge.recycler.ActivityRecycler">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开水平的recycler"
+        android:textAllCaps="false"
+        android:id="@+id/open_herizontal_recycler"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开垂直的recycler"
+        android:textAllCaps="false"
+        android:id="@+id/open_vertical_recycler"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开网格的recycler"
+        android:textAllCaps="false"
+        android:id="@+id/open_gradlayout_recycler"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开乱序的recycler"
+        android:textAllCaps="false"
+        android:id="@+id/open_stag_recycler"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开一个练习的recycler"
+        android:textAllCaps="false"
+        android:id="@+id/open_test_recycler"/>
+</LinearLayout>
