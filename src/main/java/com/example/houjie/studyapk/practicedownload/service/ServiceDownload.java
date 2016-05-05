@@ -10,12 +10,8 @@ import android.util.Log;
  * Created by houjie on 2016/4/17.
  */
 public class ServiceDownload extends Service{
-    private int download;
     private final String TAG="ServiceDownload";
     private boolean flag =true;
-    public int getDownload() {
-        return download;
-    }
 
     @Nullable
     @Override
@@ -40,11 +36,12 @@ public class ServiceDownload extends Service{
 
     @Override
     public int onStartCommand(final Intent intent, final int flags, int startId) {
+
         new Thread(new Runnable() {
             @Override
             public void run() {
 
-                    for (int i = 0;i<100&&flag;i++){
+                    for (int i = 0;i<101&&flag;i++){
                         Intent intent1 = new Intent("download_go");
                         intent1.putExtra("count",i);
                         sendBroadcast(intent1);

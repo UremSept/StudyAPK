@@ -17,7 +17,10 @@ public class ActivityNotification extends AppCompatActivity implements View.OnCl
     private Button button1;
     private  Button button2;
     private Button button3;
+    private Button button4;
     private NotificationManager manager;
+    private Notification notification;
+    private RemoteViews rv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,8 @@ public class ActivityNotification extends AppCompatActivity implements View.OnCl
         button2.setOnClickListener(this);
         button3 = (Button) findViewById(R.id.NotificationButton3);
         button3.setOnClickListener(this);
+        button4 = (Button) findViewById(R.id.NotificationButton4);
+        button4.setOnClickListener(this);
     }
 
     @Override
@@ -50,12 +55,12 @@ public class ActivityNotification extends AppCompatActivity implements View.OnCl
                 manager.notify(1,builder.build());
                 break;
             case R.id.NotificationButton2:
-                Notification notification = new Notification();
+                notification = new Notification();
                 notification.icon = R.mipmap.helloword;//必须有，虽然不显示。。。
                 notification.tickerText="您有一条新消息";
                 notification.when = System.currentTimeMillis();
                 notification.flags = Notification.FLAG_NO_CLEAR;
-                RemoteViews rv = new RemoteViews(getPackageName(),R.layout.layout_notification);
+                rv = new RemoteViews(getPackageName(),R.layout.layout_notification);
                 rv.setTextViewText(R.id.NotificationText1,"天天飞车");
                 rv.setTextViewText(R.id.NotificationText2,"清明节活动");
                 notification.contentView=rv;
@@ -66,6 +71,11 @@ public class ActivityNotification extends AppCompatActivity implements View.OnCl
                 break;
             case R.id.NotificationButton3:
                 manager.cancelAll();
+                break;
+            case R.id.NotificationButton4:
+                rv.setTextViewText(R.id.NotificationText1,"你妹");
+                notification.contentView =rv;
+                manager.notify(3,notification);
                 break;
             default:break;
         }

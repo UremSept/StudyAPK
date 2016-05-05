@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.example.houjie.studyapk.R;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ActivityArrayAdapter extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class ActivityArrayAdapter extends AppCompatActivity {
         String map = "第"+(i+1)+"天的日记";
         mList.add(map);
         }
+
         ArrayAdapter adapter =new ArrayAdapter(this,
                 android.R.layout.simple_expandable_list_item_1,mList);
         mListView = (ListView) findViewById(R.id.OnlyListView);
@@ -31,7 +33,6 @@ public class ActivityArrayAdapter extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
             }
         });
     }

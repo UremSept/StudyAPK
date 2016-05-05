@@ -1,71 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.houjie.studyapk.practicedownload.ActivityDownload">
-    <ListView
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/music_listview"
-        android:layout_above="@+id/timelayout"
-        ></ListView>
-    <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/startDownload"
+        android:text="开始下载"
+        />
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/timelayout"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/music_time"
-            android:text="00:00"
-            android:layout_toLeftOf="@+id/time_"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/"
-            android:id="@+id/time_"
-            android:layout_toLeftOf="@+id/paly_time"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/paly_time"
-            android:text="00:00"
-            android:layout_alignParentRight="true"
-            />
-    </RelativeLayout>
+        android:id="@+id/stopDownload"
+        android:text="停止下载"
+        />
+
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:max="100"
         android:progress="0"
         android:id="@+id/seekBarDownload"
+
         />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/control_layout"
-        android:orientation="horizontal"
-        >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            >
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/last_song"
-                />
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/next_song"
-                />
-        </LinearLayout>
-    </LinearLayout>
-</RelativeLayout>
+
+</LinearLayout>

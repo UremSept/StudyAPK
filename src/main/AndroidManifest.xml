@@ -2,7 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.houjie.studyapk">
 
+    <!-- 获取自启权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 获取打电话权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 获取服务可改变界面权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 获取文件增删权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 获取sd卡读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -41,34 +52,73 @@
         <activity android:name=".studyview.view.LoginFinsh" />
         <activity android:name=".studyview.view.Register" />
         <activity android:name=".studyview.view.ViewSeekBar" />
+        <activity android:name=".studyview.spinner.ViewSpinner" />
+        <activity android:name=".studyview.viewpager.ActivityViewPager" />
+        <activity android:name=".studyview.viewscroll.ViewScroll" />
         <activity android:name=".studytocastdialogwindow.StudyTDW" />
         <activity android:name=".studytocastdialogwindow.window.ActivityWindow" />
         <activity android:name=".studytocastdialogwindow.tocast.ActivityToast" />
         <activity android:name=".studytocastdialogwindow.dialog.ActivityDialog" />
         <activity android:name=".studynotification.ActivityNotification" />
         <activity android:name=".studymenu.ActivityMenu" />
-        <activity android:name=".studyview.spinner.ViewSpinner" />
         <activity android:name=".studyfragment.StudyFragment" />
         <activity android:name=".studyfragment.fragment.LifecycleActivity" />
         <activity android:name=".studyfragment.fragment.FragmentActivityTest" />
-        <activity android:name=".studyview.viewpager.ActivityViewPager" />
         <activity android:name=".studyfragment.fragmentpager.ActivityFragmentPager" />
         <activity android:name=".studytnewknowledge.tablayout.StudyTabLayout" />
         <activity android:name=".studytnewknowledge.ActivityStudyNewKnowledge" />
         <activity android:name=".studytnewknowledge.tablayout.ActivityTabFragment" />
-        <activity android:name=".studyview.viewscroll.ViewScroll" />
         <activity android:name=".studytnewknowledge.viewcard.ActivityViewCard" />
         <activity android:name=".studytnewknowledge.recycler.learnrecycler.HorizontalRecycler" />
         <activity android:name=".studytnewknowledge.recycler.ActivityRecycler" />
         <activity android:name=".studytnewknowledge.recycler.learnrecycler.StagRecycler" />
         <activity android:name=".studytnewknowledge.recycler.testrecycler.TestRecycler" />
         <activity android:name=".studyservice.ActivityService" />
-        <activity android:name=".studyservice.activity.TestServiceOne"></activity>
-        <activity android:name=".studyservice.activity.TestServiceTwo"></activity>
+        <activity android:name=".studyservice.activity.TestServiceOne" />
+        <activity android:name=".studyservice.activity.TestServiceTwo" />
 
+        <service android:name=".studyservice.bean.FirstService" />
+        <service android:name=".studyservice.bean.TestBindService" />
+        <service android:name=".studyservice.bean.TestServiceReceiver" />
+        <service android:name=".practicedownload.service.ServiceDownload" />
 
-        <service android:name=".studyservice.bean.FirstService"></service>
-        <service android:name=".studyservice.bean.TestBindService"></service>
+        <activity android:name=".studyreceiver.ActivityReceiver" />
+        <activity android:name=".studyreceiver.activity.ReceiverTestStatic" />
+        <activity android:name=".studyreceiver.activity.ReceiverTestAction" />
+
+        <receiver android:name=".studyreceiver.receiver.TestReceiverStatic">
+            <intent-filter android:priority="30">
+                <action android:name="My_Receiver" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".studyreceiver.receiver.ReceiverTestStaticOne">
+            <intent-filter android:priority="100">
+                <action android:name="My_Receiver" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".studyreceiver.receiver.ReceiverTestStaticTwo">
+            <intent-filter android:priority="500">
+                <action android:name="My_Receiver" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".studyreceiver.receiver.ReceiverTestStartOpen">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".practicedownload.ActivityDownload" />
+        <activity android:name=".studyuithread.ActivityUIThread" />
+        <activity android:name=".studyuithread.TestSwipeRefreshLayout" />
+        <activity android:name=".studyview.viewpager.ActivityViewPagerLoop" />
+        <activity android:name=".studydatastore.ActivityDataStore" />
+        <activity android:name=".studydatastore.sharedpreference.ActivitySharedPreference" />
+        <activity android:name=".studydatastore.filesystem.ActivityDataStoreFileSystem" />
+        <activity android:name=".studydatastore.database.ActivityDatabase" />
+        <activity android:name=".studydatastore.database.ActivityDatabaseAdapter" />
+        <activity android:name=".studyview.webview.ActivityWebView" />
+        <activity android:name=".studyxml.ActivityXML" />
+        <activity android:name=".studyview.webview.ActivityWebViewLocal"></activity>
     </application>
 
 </manifest>

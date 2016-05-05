@@ -11,6 +11,10 @@ import android.util.Log;
 public class ReceiverTestStaticTwo extends BroadcastReceiver{
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.i("ReceiverTestStaticOne","------------广播接收到");
+        Log.i("ReceiverTestStaticTwo","------------广播接收到");
+        if (isOrderedBroadcast()){
+            abortBroadcast();
+        }
+
     }
 }

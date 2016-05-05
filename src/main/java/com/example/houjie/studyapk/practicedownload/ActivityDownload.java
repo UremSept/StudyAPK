@@ -22,7 +22,7 @@ public class ActivityDownload extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_practice_music);
+        setContentView(R.layout.activity_practice_download);
 
         IntentFilter intentFilter = new IntentFilter();
         ReceiverDownload receiverDownload = new ReceiverDownload();
@@ -35,6 +35,7 @@ public class ActivityDownload extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ActivityDownload.this, ServiceDownload.class);
                 startService(intent);
+                button1.setClickable(false);
             }
         });
         button2 = (Button) findViewById(R.id.stopDownload);
@@ -46,6 +47,7 @@ public class ActivityDownload extends AppCompatActivity {
             }
         });
         seekBar = (SeekBar) findViewById(R.id.seekBarDownload);
+        //seekBar.setEnabled(false);
 
     }
 
@@ -53,9 +55,13 @@ public class ActivityDownload extends AppCompatActivity {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            Toast.makeText(ActivityDownload.this,"dddd",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(ActivityDownload.this,"dddd",Toast.LENGTH_SHORT).show();
             int count = intent.getIntExtra("count",0);
             seekBar.setProgress(count);
+            if(count>=100){
+                Toast.makeText(ActivityDownload.this,"下载完成",Toast.LENGTH_SHORT).show();
+                button1.setClickable(true);
+            }
         }
     }
 

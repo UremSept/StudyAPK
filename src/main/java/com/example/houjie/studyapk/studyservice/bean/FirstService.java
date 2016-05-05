@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 /**
- * Created by houjie on 2016/4/16.
+ * 简单的service
  */
 public class FirstService extends Service{
     private static final String TAG = "FirstService";

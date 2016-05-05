@@ -13,7 +13,10 @@ import com.example.houjie.studyapk.studyview.view.Login;
 import com.example.houjie.studyapk.studyview.view.PickerSwitcher;
 import com.example.houjie.studyapk.studyview.view.RichText;
 import com.example.houjie.studyapk.studyview.viewpager.ActivityViewPager;
+import com.example.houjie.studyapk.studyview.viewpager.ActivityViewPagerLoop;
 import com.example.houjie.studyapk.studyview.viewscroll.ViewScroll;
+import com.example.houjie.studyapk.studyview.webview.ActivityWebView;
+import com.example.houjie.studyapk.studyview.webview.ActivityWebViewLocal;
 
 public class StudyView extends AppCompatActivity implements View.OnClickListener{
     private Button btnRichText;
@@ -22,6 +25,9 @@ public class StudyView extends AppCompatActivity implements View.OnClickListener
     private Button btnViewPager;
     private Button btnScroll;
     private Button btnSpinner;
+    private Button btnViewPagerLoop;
+    private Button btnViewWeb;
+    private Button btnViewWebLocal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +43,16 @@ public class StudyView extends AppCompatActivity implements View.OnClickListener
         btnLogin.setOnClickListener(this);
         btnViewPager = (Button) findViewById(R.id.btnViewPager);
         btnViewPager.setOnClickListener(this);
+        btnViewPagerLoop = (Button) findViewById(R.id.btnViewPagerLoop);
+        btnViewPagerLoop.setOnClickListener(this);
         btnScroll = (Button) findViewById(R.id.btnViewScroll);
         btnScroll.setOnClickListener(this);
         btnSpinner = (Button) findViewById(R.id.btnViewSpinner);
         btnSpinner.setOnClickListener(this);
+        btnViewWeb = (Button) findViewById(R.id.btnViewWeb);
+        btnViewWeb.setOnClickListener(this);
+        btnViewWebLocal = (Button) findViewById(R.id.btnViewWebLocal);
+        btnViewWebLocal.setOnClickListener(this);
     }
 
     @Override
@@ -52,8 +64,29 @@ public class StudyView extends AppCompatActivity implements View.OnClickListener
             case R.id.btnViewPager:TestViewPager();break;
             case R.id.btnViewScroll:TestViewScroll();break;
             case R.id.btnViewSpinner:TestViewSpinner();break;
+            case R.id.btnViewPagerLoop:ViewPagerLoop();break;
+            case R.id.btnViewWeb:ViewWeb();break;
+            case R.id.btnViewWebLocal:ViewWebLocal();break;
             default:break;
         }
+    }
+
+    private void ViewWebLocal() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(StudyView.this,ActivityWebViewLocal.class));
+        startActivity(intent);
+    }
+
+    private void ViewWeb() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(StudyView.this,ActivityWebView.class));
+        startActivity(intent);
+    }
+
+    private void ViewPagerLoop() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(StudyView.this,ActivityViewPagerLoop.class));
+        startActivity(intent);
     }
 
     private void TestViewSpinner() {

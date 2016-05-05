@@ -25,13 +25,13 @@ public class RichText extends AppCompatActivity {
                 Class clazz = R.mipmap.class;
                 try{
                     Field field = clazz.getDeclaredField(source);
+
                     int id = field.getInt(null);//使用反射机制得到R.mipmap.header的值
                     drawable = getResources().getDrawable(id);//使用资源id得到图片
                     //设置图片的高宽
                     drawable.setBounds(0,0,drawable.getMinimumWidth(),drawable.getMinimumHeight());
 
                 }catch(Exception e){
-
                 }
 
                 return drawable;

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:orientation="vertical"
+    tools:context="com.example.houjie.studyapk.studyxml.ActivityXML">
+    <Button
+        android:id="@+id/dom_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DOM解析" />
+    <Button
+        android:id="@+id/sax_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAX解析" />
+    <Button
+        android:id="@+id/pull_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PULL解析" />
+    <Button
+        android:id="@+id/tojson_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生成json字符串" />
+    <Button
+        android:id="@+id/fromjson_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解析json字符串" />
+</LinearLayout>

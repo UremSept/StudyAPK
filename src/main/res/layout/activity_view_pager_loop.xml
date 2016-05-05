@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.houjie.studyapk.studyview.viewpager.ActivityViewPagerLoop">
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPagerLoop"
+        >
+
+    </android.support.v4.view.ViewPager>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewgroup"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            >
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

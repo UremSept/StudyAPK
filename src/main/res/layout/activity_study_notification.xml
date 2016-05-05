@@ -27,4 +27,9 @@ tools:context="com.example.houjie.studyapk.studynotification.ActivityNotificatio
     android:layout_height="wrap_content"
     android:text="按钮三"
     android:id="@+id/NotificationButton3"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="改变"
+        android:id="@+id/NotificationButton4"/>
 </LinearLayout>

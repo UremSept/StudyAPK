@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.houjie.studyapk.studydatastore.ActivityDataStore">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtnStudyDataStoreSharedPreference"
+        android:text="文件存储SharedPreference"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtnStudyDataStoreFileSystem"
+        android:text="文件存储文件系统"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtnStudyDataStoreDataBase"
+        android:text="文件存储数据库"
+        />
+</LinearLayout>

@@ -2,7 +2,10 @@ package com.example.houjie.studyapk.studyadapter.adapter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 import com.example.houjie.studyapk.R;
@@ -10,7 +13,7 @@ import com.example.houjie.studyapk.studyadapter.dao.People;
 
 import java.util.ArrayList;
 
-public class ActivityShowPeople extends AppCompatActivity {
+public class ActivityShowPeople extends AppCompatActivity implements AdapterView.OnItemClickListener{
     private ArrayList<People> mList;
     private ListView mListView;
     @Override
@@ -25,5 +28,12 @@ public class ActivityShowPeople extends AppCompatActivity {
         }
         ShowPepoleAdapter showPepoleAdapter = new ShowPepoleAdapter(mList,this);
         mListView.setAdapter(showPepoleAdapter);
+        mListView.setOnItemClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(ActivityShowPeople.this, ""+position, Toast.LENGTH_SHORT).show();
+        mList.get(position).setName("张三");
     }
 }

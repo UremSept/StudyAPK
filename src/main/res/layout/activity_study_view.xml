@@ -36,6 +36,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="ViewPagerLoop"
+        android:textAllCaps="false"
+        android:id="@+id/btnViewPagerLoop"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="ViewScroll"
         android:textAllCaps="false"
         android:id="@+id/btnViewScroll"
@@ -47,4 +54,19 @@
         android:textAllCaps="false"
         android:id="@+id/btnViewSpinner"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ViewWeb"
+        android:textAllCaps="false"
+        android:id="@+id/btnViewWeb"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ViewWebLocal"
+        android:textAllCaps="false"
+        android:id="@+id/btnViewWebLocal"
+        />
+
 </LinearLayout>

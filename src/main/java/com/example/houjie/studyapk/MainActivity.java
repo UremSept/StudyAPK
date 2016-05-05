@@ -7,15 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.houjie.studyapk.studyuithread.ActivityUIThread;
+import com.example.houjie.studyapk.practicedownload.ActivityDownload;
 import com.example.houjie.studyapk.studyadapter.StudyAdapter;
+import com.example.houjie.studyapk.studydatastore.ActivityDataStore;
 import com.example.houjie.studyapk.studyfragment.StudyFragment;
 import com.example.houjie.studyapk.studyintent.StudyIntent;
 import com.example.houjie.studyapk.studynotification.ActivityNotification;
 import com.example.houjie.studyapk.studymenu.ActivityMenu;
+import com.example.houjie.studyapk.studyreceiver.ActivityReceiver;
 import com.example.houjie.studyapk.studyservice.ActivityService;
 import com.example.houjie.studyapk.studytnewknowledge.ActivityStudyNewKnowledge;
 import com.example.houjie.studyapk.studytocastdialogwindow.StudyTDW;
 import com.example.houjie.studyapk.studyview.StudyView;
+import com.example.houjie.studyapk.studyxml.ActivityXML;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -28,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnStudyService;
     private Button btnStudyFragment;
     private Button btnStudyNewKnowledge;
+    private Button btnbtnStudyReceiver;
+    private Button btnPracticedDownload;
+    private Button btnStudyUIThread;
+    private Button btnStudyDataStore;
+    private Button btnStudyXML;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +64,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnStudyNewKnowledge.setOnClickListener(this);
         btnStudyService = (Button) findViewById(R.id.btnStudyService);
         btnStudyService.setOnClickListener(this);
+        btnbtnStudyReceiver = (Button) findViewById(R.id.btnStudyReceiver);
+        btnbtnStudyReceiver.setOnClickListener(this);
+        btnPracticedDownload = (Button) findViewById(R.id.btnPracticedDownload);
+        btnPracticedDownload.setOnClickListener(this);
+        btnStudyUIThread = (Button) findViewById(R.id.btnStudyUIThread);
+        btnStudyUIThread.setOnClickListener(this);
+        btnStudyDataStore = (Button) findViewById(R.id.btnStudyDataStore);
+        btnStudyDataStore.setOnClickListener(this);
+        btnStudyXML = (Button) findViewById(R.id.btnStudyXML);
+        btnStudyXML.setOnClickListener(this);
     }
 
     @Override
@@ -68,8 +88,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnStudyFragment:StudyFragment();break;
             case R.id.btnStudyNewKnowledge:StudyNewKnowledge();break;
             case R.id.btnStudyService:StudyService();break;
+            case R.id.btnStudyReceiver:StudyReceiver();break;
+            case R.id.btnPracticedDownload:PracticedDownload();break;
+            case R.id.btnStudyUIThread:StudyUIThread();break;
+            case R.id.btnStudyDataStore:StudyDataStore();break;
+            case R.id.btnStudyXML:StudyXML();break;
             default:break;
         }
+    }
+
+    private void StudyXML() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(MainActivity.this,ActivityXML.class));
+        startActivity(intent);
+    }
+
+    private void StudyDataStore() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(MainActivity.this,ActivityDataStore.class));
+        startActivity(intent);
+    }
+
+    private void StudyUIThread() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(MainActivity.this,ActivityUIThread.class));
+        startActivity(intent);
+    }
+
+    private void PracticedDownload() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(MainActivity.this,ActivityDownload.class));
+        startActivity(intent);
+    }
+
+    private void StudyReceiver() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(MainActivity.this,ActivityReceiver.class));
+        startActivity(intent);
     }
 
     private void StudyService() {

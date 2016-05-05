@@ -20,7 +20,7 @@ public class FragmentOne extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view  = inflater.inflate(R.layout.layout_only_imageview,null);
         imageView = (ImageView) view.findViewById(R.id.OnlyImageView);
-        imageView.setImageResource(R.mipmap.helloword);
+        imageView.setImageResource(R.mipmap.picture27);
         return view;
     }
 }

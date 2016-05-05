@@ -22,8 +22,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/studyViewScroll"
-        android:text="学习viewScroll"
+        android:id="@+id/studyViewCard"
+        android:text="学习viewCard"
         android:textAllCaps="false"
         />
     <Button

@@ -37,7 +37,7 @@ public class ActivityStudyNewKnowledge extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mButton2 = (Button) findViewById(R.id.studyViewScroll);
+        mButton2 = (Button) findViewById(R.id.studyViewCard);
         mButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

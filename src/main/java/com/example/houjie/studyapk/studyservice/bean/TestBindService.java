@@ -8,7 +8,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 /**
- * Created by houjie on 2016/4/16.
+ * BindService 随着Activity的生命结束而结束
  */
 public class TestBindService extends Service{
     private static final String TAG="TestBindService";
