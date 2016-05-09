@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".studyanimation.ActivityAnimationLayout">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加button时展示动画"
+        android:id="@+id/aniamtionLayoutCheckBox1"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="移除button时展示动画"
+        android:id="@+id/aniamtionLayoutCheckBox2"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加button时其他button的动画"
+        android:id="@+id/aniamtionLayoutCheckBox3"
+
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="移除button时其他button的动画"
+        android:id="@+id/aniamtionLayoutCheckBox4"
+        />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aniamtionLayoutGridLayout"
+        android:columnCount="1"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/aniamtionLayoutButton"
+            android:text="添加测试"
+            />
+    </GridLayout>
+</LinearLayout>

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.houjie.studyapk.studyanimation.ActivityAnimation;
+import com.example.houjie.studyapk.studyhttp.ActivityStudyHttp;
 import com.example.houjie.studyapk.studyuithread.ActivityUIThread;
 import com.example.houjie.studyapk.practicedownload.ActivityDownload;
 import com.example.houjie.studyapk.studyadapter.StudyAdapter;
@@ -38,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnStudyUIThread;
     private Button btnStudyDataStore;
     private Button btnStudyXML;
+    private Button btnStudyHttp;
+    private Button btnStudyAnimation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +79,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnStudyDataStore.setOnClickListener(this);
         btnStudyXML = (Button) findViewById(R.id.btnStudyXML);
         btnStudyXML.setOnClickListener(this);
+        btnStudyHttp = (Button) findViewById(R.id.btnStudyHttp);
+        btnStudyHttp.setOnClickListener(this);
+        btnStudyAnimation = (Button) findViewById(R.id.btnStudyAnimation);
+        btnStudyAnimation.setOnClickListener(this);
     }
 
     @Override
@@ -93,8 +102,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnStudyUIThread:StudyUIThread();break;
             case R.id.btnStudyDataStore:StudyDataStore();break;
             case R.id.btnStudyXML:StudyXML();break;
+            case R.id.btnStudyHttp:StudyHttp();break;
+            case R.id.btnStudyAnimation:StudyAnimation();break;
             default:break;
         }
+    }
+
+    private void StudyAnimation() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(MainActivity.this,ActivityAnimation.class));
+        startActivity(intent);
+    }
+
+    private void StudyHttp() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(MainActivity.this,ActivityStudyHttp.class));
+        startActivity(intent);
     }
 
     private void StudyXML() {
