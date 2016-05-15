@@ -16,6 +16,15 @@
         android:layout_height="300dp"
         android:id="@+id/mediaInternetVideoSurface"
         />
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mediaInternetVideoSeekBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/second_seekbar"
+        android:max="100"
+        android:progress="0"
+        />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
