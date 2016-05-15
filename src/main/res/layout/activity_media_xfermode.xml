@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.houjie.studyapk.studymedia.canvas.ActivityMediaXfermode">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/mediaXfermodeImage"
+        />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="4"
+        >
+        <Button android:text="SRC"
+            android:id="@+id/mediaXfermodeBtnSRC"
+            />
+        <Button
+            android:text="DST"
+            android:id="@+id/mediaXfermodeBtnDST"/>
+        <Button
+            android:text="DST_OVER"
+            android:id="@+id/mediaXfermodeBtnDST_OVER"/>
+        <Button
+            android:text="DST_IN"
+            android:id="@+id/mediaXfermodeBtnDST_IN"/>
+        <Button
+            android:text="DST_OUT"
+            android:id="@+id/mediaXfermodeBtnDST_OUT"/>
+        <Button android:text="DST_ATOP"
+            android:id="@+id/mediaXfermodeBtnDST_ATOP"/>
+        <Button android:text="SRC_OVER"
+            android:id="@+id/mediaXfermodeBtnSRC_OVER"/>
+        <Button android:text="SRC_IN"
+            android:id="@+id/mediaXfermodeBtnSRC_IN"/>
+        <Button android:text="SRC_OUT"
+            android:id="@+id/mediaXfermodeBtnSRC_OUT"/>
+        <Button android:text="SRC_ATOP"
+            android:id="@+id/mediaXfermodeBtnSRC_ATOP"/>
+        <Button android:text="XOR"
+            android:id="@+id/mediaXfermodeBtnXOR"/>
+        <Button android:text="LIGHTEN"
+            android:id="@+id/mediaXfermodeBtnLIGHTEN"/>
+        <Button android:text="DARKEN"
+            android:id="@+id/mediaXfermodeBtnDARKEN"/>
+        <Button android:text="MULTIPLY"
+            android:id="@+id/mediaXfermodeBtnMULTIPLY"/>
+        <Button android:text="SCREEN"
+            android:id="@+id/mediaXfermodeBtnSCREEN"/>
+        <Button android:text="CLEAR"
+            android:id="@+id/mediaXfermodeBtnCLEAR"/>
+        <!--
+        在Android的PorterDuff.Mode类中列举了他们制定的规则：
+android.graphics.PorterDuff.Mode.SRC:只绘制源图像
+android.graphics.PorterDuff.Mode.DST:只绘制目标图像
+android.graphics.PorterDuff.Mode.DST_OVER:在源图像的顶部绘制目标图像
+android.graphics.PorterDuff.Mode.DST_IN:只在源图像和目标图像相交的地方绘制目标图像
+android.graphics.PorterDuff.Mode.DST_OUT:只在源图像和目标图像不相交的地方绘制目标图像
+android.graphics.PorterDuff.Mode.DST_ATOP:在源图像和目标图像相交的地方绘制目标图像，在不相交的地方绘制源图像
+android.graphics.PorterDuff.Mode.SRC_OVER:在目标图像的顶部绘制源图像
+android.graphics.PorterDuff.Mode.SRC_IN:只在源图像和目标图像相交的地方绘制源图像
+android.graphics.PorterDuff.Mode.SRC_OUT:只在源图像和目标图像不相交的地方绘制源图像
+android.graphics.PorterDuff.Mode.SRC_ATOP:在源图像和目标图像相交的地方绘制源图像，在不相交的地方绘制目标图像
+android.graphics.PorterDuff.Mode.XOR:在源图像和目标图像重叠之外的任何地方绘制他们，而在不重叠的地方不绘制任何内容
+android.graphics.PorterDuff.Mode.LIGHTEN:获得每个位置上两幅图像中最亮的像素并显示
+android.graphics.PorterDuff.Mode.DARKEN:获得每个位置上两幅图像中最暗的像素并显示
+android.graphics.PorterDuff.Mode.MULTIPLY:将每个位置的两个像素相乘，除以255，然后使用该值创建一个新的像素进行显示。结果颜色=顶部颜色*底部颜色/255
+android.graphics.PorterDuff.Mode.SCREEN:反转每个颜色，执行相同的操作（将他们相乘并除以255），然后再次反转。结果颜色=255-(((255-顶部颜色)*(255-底部颜色))/255)
+        -->
+    </GridLayout>
+</LinearLayout>

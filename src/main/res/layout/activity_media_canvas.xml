@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.houjie.studyapk.studymedia.canvas.ActivityMediaCanvas">
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="填充画布"
+    android:id="@+id/MediaCanvasBtn1"
+    />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绘制直线"
+        android:id="@+id/MediaCanvasBtn2"
+        /><Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="绘制圆"
+    android:id="@+id/MediaCanvasBtn3"
+    /><Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="绘制图片"
+    android:id="@+id/MediaCanvasBtn4"
+    />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绘制表盘"
+        android:id="@+id/MediaCanvasBtn5"
+
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/MediaCanvasImage"/>
+
+
+</LinearLayout>

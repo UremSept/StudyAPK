@@ -132,7 +132,19 @@
         <activity android:name=".studyanimation.ActivityFBF" />
         <activity android:name=".studyanimation.ActivityAnimator" />
         <activity android:name=".studyanimation.ActivityAnimatorListView" />
-        <activity android:name=".studyanimation.ActivityAnimationLayout"></activity>
+        <activity android:name=".studyanimation.ActivityAnimationLayout" />
+        <activity android:name=".studymedia.ActivityMedia" />
+        <activity android:name=".studymedia.mipmap.ActivityMediaMipmap" />
+        <activity android:name=".studymedia.canvas.ActivityMediaCanvas" />
+        <activity android:name=".studymedia.canvas.ActivityMediaCanvasZigzag" />
+        <activity android:name=".studymedia.canvas.ActivityMediaXfermode" />
+        <activity android:name=".studymedia.canvas.ActivityMediaCatPicture" />
+        <activity android:name=".studymedia.canvas.ActivityMediaChangeColor" />
+        <activity android:name=".studymedia.mipmap.ActivityMediaMatrix" />
+        <activity android:name=".studymedia.music.ActivityMediaMusic" />
+        <activity android:name=".studymedia.music.ActivityMediaInternetMusic" />
+        <activity android:name=".studymedia.video.ActivityMediaVideo" />
+        <activity android:name=".studymedia.video.ActivityMediaInternetVideo"></activity>
     </application>
 
 </manifest>

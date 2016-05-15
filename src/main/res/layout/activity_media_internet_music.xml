@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.houjie.studyapk.studymedia.music.ActivityMediaInternetMusic">
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/mediaInternetMusicSeekBar"
+        android:max="100"
+        android:progressDrawable="@drawable/second_seekbar"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mediaInternetMusicBtn1"
+        android:text="播放"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mediaInternetMusicBtn2"
+        android:text="finsh"
+        android:textAllCaps="false"
+        />
+</LinearLayout>
