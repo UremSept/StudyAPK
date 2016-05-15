@@ -1,7 +1,8 @@
 package com.example.houjie.studyapk.studymedia.video;
 
+
 import android.media.MediaPlayer;
-import android.os.Environment;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,16 +12,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
-
 import com.example.houjie.studyapk.R;
-
-import java.io.File;
 import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class ActivityMediaInternetVideo extends AppCompatActivity implements MediaPlayer.OnPreparedListener
-,MediaPlayer.OnBufferingUpdateListener{
+,MediaPlayer.OnBufferingUpdateListener,MediaPlayer.OnVideoSizeChangedListener{
     private String path = "http://172.6.1.73:8080/AndroidWebServer/video1.mp4";
     private EditText mediaInternetVideoEdit;
     private SurfaceView surfaceView;
@@ -29,7 +27,6 @@ public class ActivityMediaInternetVideo extends AppCompatActivity implements Med
     private boolean aBoolean = false;
     private SeekBar seekBar;
     private Timer timer;
-    private int max =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +58,6 @@ public class ActivityMediaInternetVideo extends AppCompatActivity implements Med
                             mediaPlay.prepareAsync();
                             mediaPlay.seekTo(0);
                             aBoolean =true;
-                            max = mediaPlay.getDuration();
                             seekBar.setMax(100);
                             Log.i("media长度","--------------"+100);
                             timer = new Timer();
@@ -115,5 +111,10 @@ public class ActivityMediaInternetVideo extends AppCompatActivity implements Med
     public void onBufferingUpdate(MediaPlayer mp, int percent) {
         seekBar.setSecondaryProgress(percent);
         Log.e("音乐缓存进度","-------------------------"+percent);
+    }
+
+    @Override
+    public void onVideoSizeChanged(MediaPlayer mp, int width, int height) {
+
     }
 }

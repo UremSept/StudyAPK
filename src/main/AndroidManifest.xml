@@ -144,7 +144,10 @@
         <activity android:name=".studymedia.music.ActivityMediaMusic" />
         <activity android:name=".studymedia.music.ActivityMediaInternetMusic" />
         <activity android:name=".studymedia.video.ActivityMediaVideo" />
-        <activity android:name=".studymedia.video.ActivityMediaInternetVideo"></activity>
+        <activity android:name=".studymedia.video.ActivityMediaInternetVideo"
+
+            ></activity>
+        <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
     </application>
 
 </manifest>
