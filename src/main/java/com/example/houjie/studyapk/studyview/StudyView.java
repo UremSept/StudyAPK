@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.houjie.studyapk.R;
+import com.example.houjie.studyapk.studyview.custom.ActivityCustomView;
 import com.example.houjie.studyapk.studyview.spinner.ViewSpinner;
 import com.example.houjie.studyapk.studyview.view.Login;
 import com.example.houjie.studyapk.studyview.view.PickerSwitcher;
@@ -28,6 +29,7 @@ public class StudyView extends AppCompatActivity implements View.OnClickListener
     private Button btnViewPagerLoop;
     private Button btnViewWeb;
     private Button btnViewWebLocal;
+    private Button btnViewCustom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +55,8 @@ public class StudyView extends AppCompatActivity implements View.OnClickListener
         btnViewWeb.setOnClickListener(this);
         btnViewWebLocal = (Button) findViewById(R.id.btnViewWebLocal);
         btnViewWebLocal.setOnClickListener(this);
+        btnViewCustom = (Button) findViewById(R.id.btnViewCustom);
+        btnViewCustom.setOnClickListener(this);
     }
 
     @Override
@@ -67,8 +71,15 @@ public class StudyView extends AppCompatActivity implements View.OnClickListener
             case R.id.btnViewPagerLoop:ViewPagerLoop();break;
             case R.id.btnViewWeb:ViewWeb();break;
             case R.id.btnViewWebLocal:ViewWebLocal();break;
+            case R.id.btnViewCustom:ViewCustom();break;
             default:break;
         }
+    }
+
+    private void ViewCustom() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(StudyView.this,ActivityCustomView.class));
+        startActivity(intent);
     }
 
     private void ViewWebLocal() {

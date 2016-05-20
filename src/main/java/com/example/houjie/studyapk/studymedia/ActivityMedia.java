@@ -16,6 +16,7 @@ import com.example.houjie.studyapk.studymedia.canvas.ActivityMediaXfermode;
 import com.example.houjie.studyapk.studymedia.mipmap.ActivityMediaMatrix;
 import com.example.houjie.studyapk.studymedia.mipmap.ActivityMediaMipmap;
 import com.example.houjie.studyapk.studymedia.music.ActivityMediaMusic;
+import com.example.houjie.studyapk.studymedia.record.ActivityMediaRecord;
 import com.example.houjie.studyapk.studymedia.video.ActivityMediaVideo;
 
 public class ActivityMedia extends AppCompatActivity {
@@ -28,6 +29,7 @@ public class ActivityMedia extends AppCompatActivity {
     private Button mediaMatrix;
     private Button mediaMusic;
     private Button mediaVideo;
+    private Button mediaRecord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,6 +113,15 @@ public class ActivityMedia extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setComponent(new ComponentName(ActivityMedia.this,ActivityMediaVideo.class));
+                startActivity(intent);
+            }
+        });
+        mediaRecord = (Button) findViewById(R.id.mediaRecord);
+        mediaRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setComponent(new ComponentName(ActivityMedia.this,ActivityMediaRecord.class));
                 startActivity(intent);
             }
         });

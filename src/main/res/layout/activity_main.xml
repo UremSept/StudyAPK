@@ -131,6 +131,12 @@
         android:text="学习Meida图片、音乐、媒体，画板"
         android:textAllCaps="false"
         android:id="@+id/btnStudyMedia" />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="学习传感器"
+        android:textAllCaps="false"
+        android:id="@+id/btnStudySensor" />
 </GridLayout>
 </ScrollView>
 </LinearLayout>

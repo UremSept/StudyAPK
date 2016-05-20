@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.example.houjie.studyapk.studyanimation.ActivityAnimation;
 import com.example.houjie.studyapk.studyhttp.ActivityStudyHttp;
 import com.example.houjie.studyapk.studymedia.ActivityMedia;
+import com.example.houjie.studyapk.studysensor.ActivitySensor;
 import com.example.houjie.studyapk.studyuithread.ActivityUIThread;
 import com.example.houjie.studyapk.practicedownload.ActivityDownload;
 import com.example.houjie.studyapk.studyadapter.StudyAdapter;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnStudyHttp;
     private Button btnStudyAnimation;
     private Button btnStudyMedia;
+    private Button btnStudySensor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +89,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnStudyAnimation.setOnClickListener(this);
         btnStudyMedia = (Button) findViewById(R.id.btnStudyMedia);
         btnStudyMedia.setOnClickListener(this);
+        btnStudySensor = (Button) findViewById(R.id.btnStudySensor);
+        btnStudySensor.setOnClickListener(this);
     }
 
     @Override
@@ -109,8 +113,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnStudyHttp:StudyHttp();break;
             case R.id.btnStudyAnimation:StudyAnimation();break;
             case R.id.btnStudyMedia:StudyMedia();break;
+            case R.id.btnStudySensor:StudySensor();break;
             default:break;
         }
+    }
+
+    private void StudySensor() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(MainActivity.this,ActivitySensor.class));
+        startActivity(intent);
     }
 
     private void StudyMedia() {
