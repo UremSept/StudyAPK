@@ -25,5 +25,12 @@ android:orientation="vertical"
         android:text="HttpOk方法连接网络"
         android:textAllCaps="false"
         />
+   <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStudyHttpDownImage"
+        android:text="加载图片"
+        android:textAllCaps="false"
+        />
 
 </LinearLayout>

@@ -12,7 +12,7 @@ import com.example.houjie.studyapk.R;
 
 public class ActivityCustomEvent extends AppCompatActivity {
     private Button button;
-    private GestureDetector gestureDetector;
+    private GestureDetector gestureDetector;//（Gesture：手势Detector：识别）
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.houjie.studyapk.R;
+import com.example.houjie.studyapk.studyhttp.activity.ActivityHttpDownImage;
 import com.example.houjie.studyapk.studyhttp.activity.ActivityHttpOk;
 import com.example.houjie.studyapk.studyhttp.activity.ActivityHttpSeeNews;
 import com.example.houjie.studyapk.studyhttp.activity.ActivityVolley;
@@ -15,6 +16,7 @@ public class ActivityStudyHttp extends AppCompatActivity {
     private Button btnStudyHttpSeeNews;
     private Button btnStudyHttpVolley;
     private Button btnStudyHttpOk;
+    private Button btnStudyHttpDownImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,14 @@ public class ActivityStudyHttp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ActivityStudyHttp.this, ActivityHttpOk.class);
+                startActivity(intent);
+            }
+        });
+        btnStudyHttpDownImage = (Button) findViewById(R.id.btnStudyHttpDownImage);
+        btnStudyHttpDownImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityStudyHttp.this, ActivityHttpDownImage.class);
                 startActivity(intent);
             }
         });
