@@ -17,11 +17,16 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.squareup.picasso.Picasso;
 
+import uk.co.senab.photoview.PhotoView;
+import uk.co.senab.photoview.PhotoViewAttacher;
+
 public class ActivityHttpDownImage extends AppCompatActivity {
     //1、在MyApplication中初始化
     //2、储存卡、网络请求权限
     //注意引用包
+    private PhotoViewAttacher photoViewAttacher;
     private ImageView httpDownImageImageView1;
+    private ImageView httpDownImageImageView2;
     private SimpleDraweeView httpDownImageImageView3;
     private Button httpDownImageBtn1, httpDownImageBtn2, httpDownImageBtn3, httpDownImageBtn4, httpDownImageBtn5;
     private String uri = "http://www.cnr.cn/ent/list/20151116/W020151116277914069193.jpg";
@@ -32,6 +37,7 @@ public class ActivityHttpDownImage extends AppCompatActivity {
         Fresco.initialize(this);
         setContentView(R.layout.activity_http_down_image);
         httpDownImageImageView1 = (ImageView) findViewById(R.id.httpDownImageImageView1);
+        httpDownImageImageView2 = (ImageView) findViewById(R.id.httpDownImageImageView2);
         httpDownImageImageView3 = (SimpleDraweeView) findViewById(R.id.httpDownImageImageView3);
         httpDownImageBtn1 = (Button) findViewById(R.id.httpDownImageBtn1);
         httpDownImageBtn1.setOnClickListener(new View.OnClickListener() {
@@ -140,9 +146,9 @@ public class ActivityHttpDownImage extends AppCompatActivity {
                  mAnimatedGifView.setController(animatedGifController);
                  */
                 DraweeController draweeController = Fresco.newDraweeControllerBuilder()
-                        //.setAutoPlayAnimations(true)
-                        .setUri(Uri.parse(uri))//fresco:fadeDuration="300"
-                        //"http://pic11.nipic.com/20101107/5963073_141803043683_2.gif"
+                        .setAutoPlayAnimations(true)
+                        .setUri(Uri.parse("http://pic11.nipic.com/20101107/5963073_141803043683_2.gif"))//fresco:fadeDuration="300"
+                        //
                         .build();
                 httpDownImageImageView3.setController(draweeController);
 
@@ -176,7 +182,12 @@ public class ActivityHttpDownImage extends AppCompatActivity {
                  * 开源的显示图片的控件，能够对控件进行放大缩小的操作
                  使用简单https://github.com/bm-x/PhotoView
                  */
+                Glide.with(ActivityHttpDownImage.this).load(uri).into(httpDownImageImageView2);
 
+                // Attach a PhotoViewAttacher, which takes care of all of the zooming functionality.
+                // (not needed unless you are going to change the drawable later)
+                photoViewAttacher = new PhotoViewAttacher(httpDownImageImageView2);
+                photoViewAttacher.update();
             }
         });
     }

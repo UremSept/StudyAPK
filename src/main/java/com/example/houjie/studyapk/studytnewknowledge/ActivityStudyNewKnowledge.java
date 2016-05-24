@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.houjie.studyapk.R;
+import com.example.houjie.studyapk.studytnewknowledge.new5_0.ActivityNewKnowledge5_0;
 import com.example.houjie.studyapk.studytnewknowledge.recycler.ActivityRecycler;
 import com.example.houjie.studyapk.studytnewknowledge.tablayout.ActivityTabFragment;
 import com.example.houjie.studyapk.studytnewknowledge.tablayout.StudyTabLayout;
@@ -17,6 +18,7 @@ public class ActivityStudyNewKnowledge extends AppCompatActivity {
     private Button mButton1;
     private Button mButton2;
     private Button mButton3;
+    private Button studyNewKnowledge5_0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,14 @@ public class ActivityStudyNewKnowledge extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ActivityStudyNewKnowledge.this, ActivityRecycler.class);
+                startActivity(intent);
+            }
+        });
+        studyNewKnowledge5_0 = (Button) findViewById(R.id.studyNewKnowledge5_0);
+        studyNewKnowledge5_0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityStudyNewKnowledge.this, ActivityNewKnowledge5_0.class);
                 startActivity(intent);
             }
         });

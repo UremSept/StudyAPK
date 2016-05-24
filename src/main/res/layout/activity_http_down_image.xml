@@ -12,8 +12,8 @@
         android:id="@+id/httpDownImageImageView1"
         />
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:id="@+id/httpDownImageImageView2"
         />
     <HorizontalScrollView
@@ -71,6 +71,7 @@
         android:id="@+id/httpDownImageImageView3"
         android:layout_width="200dp"
         android:layout_height="200dp"
-
+        fresco:placeholderImage="@color/colorBule"
+        fresco:failureImage="@mipmap/ic_launcher"
         />
 </LinearLayout>

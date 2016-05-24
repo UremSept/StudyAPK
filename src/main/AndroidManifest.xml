@@ -157,7 +157,8 @@
         <activity android:name=".studyview.custom.ActivityCustomViewGroup" />
         <activity android:name=".studyview.custom.ActivityCustomViewAccBall" />
         <activity android:name=".studyview.custom.ActivityCustomEvent" />
-        <activity android:name=".studyhttp.activity.ActivityHttpDownImage"></activity>
+        <activity android:name=".studyhttp.activity.ActivityHttpDownImage" />
+        <activity android:name=".studytnewknowledge.new5_0.ActivityNewKnowledge5_0"></activity>
     </application>
 
 </manifest>
