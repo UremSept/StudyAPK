@@ -6,8 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:id="@+id/newKnowledgeDrawerLayout"
     tools:context="com.example.houjie.studyapk.studytnewknowledge.new5_0.ActivityNewKnowledge5_0">
-    <!--DrawerLayout是ViewGroup的子类。作为一个界面的顶层容器。
+    <!--DrawerLayout是ViewGroup的子类。
+    作为一个界面的顶层容器。
     允许抽屉窗口从左右边缘拖出。
 DrawerLayout中抽屉的位置由layout_gravity控制，start代表右边end代表左边（国内）。
 抽屉窗口的高度一般设置为match_parent。-->
